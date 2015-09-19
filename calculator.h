@@ -1,14 +1,14 @@
 #pragma once
 
 #include <string>
+#include "token_stream.h"
 
 namespace calculator
 {
 
-//TODO: implement
-inline double calculate(const std::string& i_expresion)
-{
-    return 0.;
-}
+double get_primary (parser::token_stream& ts);
+double get_term (parser::token_stream& ts);
+double get_expression (parser::token_stream& ts);
+double calculate(const std::string& input_string);
 
 }

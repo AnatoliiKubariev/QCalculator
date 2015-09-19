@@ -33,6 +33,13 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="2">
+     <widget class="QPushButton" name="digitButton_6">
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="3">
      <widget class="QPushButton" name="minusButton">
       <property name="text">
@@ -131,13 +138,6 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="digitButton_6">
-      <property name="text">
-       <string>6</string>
-      </property>
-     </widget>
-    </item>
     <item row="4" column="2">
      <widget class="QPushButton" name="equalsButton">
       <property name="text">
@@ -148,7 +148,7 @@
     <item row="0" column="0" colspan="4">
      <widget class="QLineEdit" name="lineEdit">
       <property name="text">
-       <string>-3+2</string>
+       <string>0</string>
       </property>
      </widget>
     </item>

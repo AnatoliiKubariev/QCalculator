@@ -19,6 +19,7 @@ double get_primary (parser::token_stream& ts)
         t = ts.get();
         if(t.get_kind() != ')')
             throw std::logic_error("no ')' after '('");
+        //ts.putback(t);
         return res;
     }
     case 'V':
@@ -86,7 +87,12 @@ double get_expression (parser::token_stream& ts)
             return res;
         }
     }
+}
 
+double calculate(const std::string& input_string)
+{
+    parser::token_stream ts(input_string);
+    return get_expression(ts);
 }
 
 }

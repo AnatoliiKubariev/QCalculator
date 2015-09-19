@@ -4,6 +4,14 @@
 namespace parser
 {
 
+token::token(char ch)
+    : kind(ch)
+    , value(0) {}
+
+token::token(double val, char ch /*= 'V'*/)
+    : kind(ch)
+    , value(val) {}
+
 
 void token::clear()
 {

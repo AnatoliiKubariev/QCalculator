@@ -14,9 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
+    token.cpp \
+    token_stream.cpp \
+    calculator.cpp
 
 HEADERS  += mainwindow.h \
-    calculator.h
+    calculator.h \
+    token.h \
+    token_stream.h
 
 FORMS    += mainwindow.ui
 

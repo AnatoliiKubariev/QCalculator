@@ -10,11 +10,11 @@ namespace parser
 class token_stream
 {
 public:
-    token_stream(const std::string& s): full(false), buffer(), input(s){}
+    token_stream(const std::string& s);
 
     void putback(token t);
-
     token get();
+
 private:
     bool full;
     token buffer;
