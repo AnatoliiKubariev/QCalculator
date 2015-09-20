@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <vector>
 #include <sstream>
+#include <stdexcept>
 #include "calculator.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -48,9 +48,15 @@ void MainWindow::buttonClick()
 void MainWindow::on_equalsButton_clicked()
 {
     const std::string expresion = ui->lineEdit->text().toStdString();
-    const double result = calculator::calculate(expresion);
-
-    ui->lineEdit->setText(QString::number(result));
+    try
+    {
+        const double result = calculator::calculate(expresion);
+        ui->lineEdit->setText(QString::number(result));
+    }
+    catch(std::exception e)
+    {
+        ui->lineEdit->setText(e.what());
+    }
 }
 
 
